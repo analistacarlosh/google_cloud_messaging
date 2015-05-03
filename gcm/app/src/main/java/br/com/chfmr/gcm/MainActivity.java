@@ -1,7 +1,7 @@
 package br.com.chfmr.gcm;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -33,7 +33,6 @@ public class MainActivity extends ActionBarActivity {
             Toast.makeText(this, R.string.erro_gplay_falha_registrar, Toast.LENGTH_SHORT).show();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

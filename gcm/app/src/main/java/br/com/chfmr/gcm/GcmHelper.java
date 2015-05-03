@@ -21,7 +21,6 @@ public class GcmHelper {
     public static final int REQUEST_CODE_GOOGLEPLAY = 100;
     public static final String PROP_REG_ID = "registration_id";
     private static final String PROP_APP_VERSION = "appVersion";
-
     private static  final String SENDER_ID = "643865226654";
 
     public static boolean googlePlayServicesEstaDisponivel(Activity activity) {

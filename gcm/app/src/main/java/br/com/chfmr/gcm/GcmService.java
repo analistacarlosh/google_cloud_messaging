@@ -33,7 +33,7 @@ public class GcmService extends IntentService {
 
         if(!extras.isEmpty()){
             if(GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)){
-                // startService(new Intent(this, MainIntentService.class));
+                startService(new Intent(this, MainActivity.class));
                 sendNotification(extras.getString("mensagem"));
             }
         }
@@ -47,6 +47,7 @@ public class GcmService extends IntentService {
         Intent it = new Intent(this, MainActivity.class);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addNextIntent(it);
         PendingIntent pit = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
 
         NotificationCompat.Builder mBuilder =
